@@ -15,6 +15,6 @@ pnpm run build
 
 ## 🤖 Tech
 - SolidJS
-- shadcn-ui
+- @solid-primitives/websocket
 - Tailwind CSS
 - TypeScript
