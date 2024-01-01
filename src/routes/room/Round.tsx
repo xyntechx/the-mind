@@ -5,8 +5,10 @@ const Round: Component = () => {
     const roundIndex = useLocation().pathname.split("/")[3];
 
     return (
-        <p>{roundIndex}</p>
-    )
-}
+        <>
+            <h1>Round {roundIndex}</h1>
+        </>
+    );
+};
 
-export default Round
+export default Round;

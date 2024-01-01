@@ -23,7 +23,7 @@ render(
         <Router root={App}>
             <Route path="/" component={Home} />
             <Route path="/room/:id" component={Room} />
-            <Route path="/room/:id/:round" component={Room} />
+            <Route path="/room/:id/:round" component={Round} />
             <Route path="*404" component={NotFound} />
         </Router>
     ),
