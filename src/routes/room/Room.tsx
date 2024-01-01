@@ -1,11 +1,11 @@
 import type { Component } from "solid-js";
-import type { IWSData } from "../utils/types";
+import type { IWSData } from "../../utils/types";
 import { For, createSignal, onMount } from "solid-js";
 import { createStore } from "solid-js/store";
 import { useLocation } from "@solidjs/router";
 import { createReconnectingWS, WSMessage } from "@solid-primitives/websocket";
 
-const App: Component = () => {
+const Room: Component = () => {
     const roomID = useLocation().pathname.split("/")[2];
 
     const [roundIndex, setRoundIndex] = createSignal(1); // TODO: Increment each round!!!
@@ -94,4 +94,4 @@ const App: Component = () => {
     );
 };
 
-export default App;
+export default Room;
