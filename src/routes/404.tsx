@@ -4,13 +4,13 @@ import { A } from "@solidjs/router";
 const NotFound: Component = () => {
     return (
         <>
-            <p>
-                Oops! This page doesn't exist.{" "}
-                <A href="/" class="text-orange-400 transition-colors hover:text-orange-500">
-                    Back to home
-                </A>
-                .
-            </p>
+            <p>Oops! This page doesn't exist.</p>
+            <A
+                href="/"
+                class="bg-white text-black border border-white rounded-md py-1 px-4 mt-4 transition-colors hover:bg-black hover:text-white"
+            >
+                Back to home
+            </A>
         </>
     );
 };
