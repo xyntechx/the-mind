@@ -67,6 +67,7 @@ const Room: Component = () => {
             when={isPlaying()}
             fallback={
                 <Landing
+                    ws={ws}
                     roomID={roomID}
                     isAdmin={isRoomAdmin()}
                     setIsPlaying={setIsPlaying}

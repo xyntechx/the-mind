@@ -1,4 +1,11 @@
 export interface IWSData {
-    id: "answer" | "card" | "joinRoom" | "leaveRoom" | "winGame" | "loseGame";
+    id:
+        | "answer"
+        | "card"
+        | "joinRoom"
+        | "leaveRoom"
+        | "start"
+        | "winGame"
+        | "loseGame";
     message: string;
 }
