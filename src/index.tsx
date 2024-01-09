@@ -7,6 +7,7 @@ import App from "./App";
 
 const Home = lazy(() => import("./routes/home"));
 const Room = lazy(() => import("./routes/room"));
+const Lose = lazy(() => import("./routes/lose"));
 const NotFound = lazy(() => import("./routes/404"));
 
 const root = document.getElementById("root");
@@ -22,6 +23,7 @@ render(
         <Router root={App}>
             <Route path="/" component={Home} />
             <Route path="/room/:id" component={Room} />
+            <Route path="/lose" component={Lose} />
             <Route path="*404" component={NotFound} />
         </Router>
     ),

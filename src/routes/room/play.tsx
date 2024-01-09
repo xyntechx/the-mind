@@ -4,6 +4,7 @@ import { For, Show, createEffect, createSignal, onMount } from "solid-js";
 import { createStore } from "solid-js/store";
 import { WSMessage } from "@solid-primitives/websocket";
 import type { ReconnectingWebSocket } from "@solid-primitives/websocket";
+import { useNavigate } from "@solidjs/router";
 
 interface IProps {
     ws: ReconnectingWebSocket;
@@ -18,6 +19,7 @@ const Play: Component<IProps> = ({
     isAdmin,
     setIsPlaying,
 }) => {
+    const navigate = useNavigate();
     const [roundIndex, setRoundIndex] = createSignal(1);
     const [answers, setAnswers] = createStore<WSMessage[]>([]);
     const [cards, setCards] = createStore<number[]>([]);
@@ -41,7 +43,7 @@ const Play: Component<IProps> = ({
 
                 ws.send(JSON.stringify(data));
 
-                setIsPlaying(false);
+                navigate("/lose");
             }
         }
     });
@@ -128,7 +130,7 @@ const Play: Component<IProps> = ({
                 generateRandomCards(roundIndex() - cards.length);
                 break;
             case "loseGame":
-                setIsPlaying(false);
+                navigate("/lose");
                 break;
             case "winGame":
                 handleWinCondition();
