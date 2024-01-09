@@ -138,19 +138,24 @@ const Play: Component<IProps> = ({
 
     return (
         <>
-            <h1>Round {roundIndex()}</h1>
-            <For each={answers}>{(answer) => <p>{answer.toString()}</p>}</For>
-            <For each={cards}>
-                {(card) => (
-                    <button
-                        value={card.toString()}
-                        onClick={[handleCardSelect, card]}
-                        class="w-[100px] h-[100px] border border-white rounded-md"
-                    >
-                        {card}
-                    </button>
-                )}
-            </For>
+            <div class="flex items-center justify-center flex-row gap-x-2 gap-y-2 mb-4">
+                <For each={answers}>
+                    {(answer) => <p>{answer.toString()}</p>}
+                </For>
+            </div>
+            <div class="flex items-center justify-center flex-row gap-x-2 gap-y-2">
+                <For each={cards}>
+                    {(card) => (
+                        <button
+                            value={card.toString()}
+                            onClick={[handleCardSelect, card]}
+                            class="w-[100px] h-[100px] border border-white rounded-md"
+                        >
+                            {card}
+                        </button>
+                    )}
+                </For>
+            </div>
             <Show when={enableNextRound()}>
                 <button
                     onClick={() => goToNextRound()}
