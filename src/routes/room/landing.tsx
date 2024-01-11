@@ -31,25 +31,25 @@ const Landing: Component<IProps> = ({ ws, roomID, isAdmin, setIsPlaying }) => {
             <Show
                 when={isAdmin}
                 fallback={
-                    <p>
+                    <p class="text-center">
                         You have successfully joined the room with the following
                         ID
                     </p>
                 }
             >
-                <p>Your room has been created!</p>
-                <p>
+                <p class="text-center">Your room has been created!</p>
+                <p class="text-center">
                     Share the following Room ID with your friends to start
                     playing.
                 </p>
             </Show>
             <div class="border border-white rounded-md py-1 px-4 mt-4">
-                <p>{roomID}</p>
+                <p class="text-center">{roomID}</p>
             </div>
             <Show
                 when={isAdmin}
                 fallback={
-                    <p class="italic mt-4">
+                    <p class="text-center italic mt-4">
                         Waiting for host to start the game...
                     </p>
                 }

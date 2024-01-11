@@ -145,13 +145,13 @@ const Play: Component<IProps> = ({
                     {(answer) => <p>{answer.toString()}</p>}
                 </For>
             </div>
-            <div class="flex items-center justify-center flex-row gap-x-2 gap-y-2">
+            <div class="flex items-center justify-center flex-row gap-x-2 gap-y-2 w-[400px] flex-wrap">
                 <For each={cards}>
                     {(card) => (
                         <button
                             value={card.toString()}
                             onClick={[handleCardSelect, card]}
-                            class="w-[100px] h-[100px] border border-white rounded-md"
+                            class="w-[100px] h-[100px] border border-white rounded-md text-center bg-white text-black transition-colors hover:bg-black hover:text-white"
                         >
                             {card}
                         </button>

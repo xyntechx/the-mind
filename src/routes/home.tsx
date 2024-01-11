@@ -19,7 +19,7 @@ const Home: Component = () => {
 
     return (
         <>
-            <h1 class="text-xl font-bold mb-4">The Mind</h1>
+            <h1 class="text-xl text-center font-bold mb-4">The Mind</h1>
             <div class="w-[400px] flex items-center justify-center flex-col gap-y-2">
                 <button
                     onClick={() => createRoom()}
@@ -27,7 +27,7 @@ const Home: Component = () => {
                 >
                     Create Room
                 </button>
-                <p>OR</p>
+                <p class="text-center">OR</p>
                 <div class="w-full flex items-center justify-center flex-row">
                     <input
                         onInput={(e) => setRoomID(e.currentTarget.value)}
